@@ -1,4 +1,3 @@
-
 /* Modern CSS Reset and Base Styles */
 * {
     margin: 0;
@@ -399,7 +398,7 @@ body {
 
 .overlay-popup {
     position: absolute;
-    top: 80px;
+    top: 120px;
     left: 20px;
     right: 20px;
     background: white;
@@ -408,6 +407,7 @@ body {
     box-shadow: var(--shadow-2xl);
     color: var(--gray-900);
     animation: overlay-appear 2s ease-in-out infinite alternate;
+    border: 1px solid var(--gray-200);
 }
 
 @keyframes overlay-appear {
@@ -425,8 +425,8 @@ body {
 }
 
 .overlay-header img {
-    width: 28px;
-    height: 28px;
+    width: 24px;
+    height: 24px;
     border-radius: var(--radius-md);
 }
 
@@ -434,6 +434,7 @@ body {
     font-weight: 600;
     color: var(--gray-700);
     flex: 1;
+    font-size: var(--font-size-sm);
 }
 
 .close-btn {
@@ -455,50 +456,22 @@ body {
     color: var(--gray-600);
 }
 
-.spend-summary h3 {
-    font-size: var(--font-size-base);
-    color: var(--gray-600);
-    margin-bottom: var(--space-2);
+.spend-summary {
+    text-align: center;
 }
 
 .amount {
-    font-size: var(--font-size-3xl);
+    font-size: var(--font-size-2xl);
     font-weight: 800;
-    color: var(--danger-500);
-    margin-bottom: var(--space-1);
+    color: var(--primary-600);
+    margin-bottom: var(--space-2);
+    line-height: 1.2;
 }
 
 .comparison {
     font-size: var(--font-size-sm);
-    color: var(--warning-500);
-    font-weight: 600;
-    margin-bottom: var(--space-4);
-}
-
-.categories {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-}
-
-.category {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--space-2) var(--space-3);
-    background: var(--gray-50);
-    border-radius: var(--radius-lg);
-}
-
-.category span:first-child {
     color: var(--gray-600);
-    font-size: var(--font-size-sm);
-}
-
-.category span:last-child {
-    font-weight: 600;
-    color: var(--gray-900);
-    font-size: var(--font-size-sm);
+    font-weight: 500;
 }
 
 .demo-annotation {
@@ -641,6 +614,7 @@ body {
     box-shadow: var(--shadow-lg);
 }
 
+/* Problem Stats - Updated */
 .problem-stats {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
