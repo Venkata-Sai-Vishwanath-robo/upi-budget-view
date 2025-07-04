@@ -1,73 +1,78 @@
-# Welcome to your Lovable project
 
-## Project info
+# PaymentZero Landing Page
 
-**URL**: https://lovable.dev/projects/32278089-b484-438c-852e-f6230f437cee
+This is the official landing page for PaymentZero - an open source Android app designed to help users stay aware of their UPI spending habits.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **Modern Design**: Clean, responsive design optimized for all devices
+- **Performance Optimized**: Fast loading with minimal dependencies
+- **SEO Ready**: Proper meta tags and structured content
+- **Interactive Elements**: Smooth animations and micro-interactions
+- **Mobile First**: Optimized for mobile users (the primary audience)
 
-**Use Lovable**
+## Deployment
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/32278089-b484-438c-852e-f6230f437cee) and start prompting.
+This site is designed to be deployed on GitHub Pages with a custom domain (paymentzero.in).
 
-Changes made via Lovable will be committed automatically to this repo.
+### Setup Instructions
 
-**Use your preferred IDE**
+1. Push this code to a GitHub repository
+2. Enable GitHub Pages in repository settings
+3. Configure custom domain to point to `yourusername.github.io/repository-name`
+4. Update DNS settings for paymentzero.in:
+   - Add CNAME record pointing to your GitHub Pages URL
+   - Add A records pointing to GitHub Pages IPs
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Local Development
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Clone the repository
+2. Open `index.html` in a local server (use Live Server extension in VS Code)
+3. Make changes and test locally before pushing
 
-Follow these steps:
+## File Structure
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+├── index.html          # Main HTML file
+├── styles.css          # All styles and responsive design
+├── script.js           # Interactive functionality
+├── sw.js              # Service worker for caching
+└── README.md          # This file
 ```
 
-**Edit a file directly in GitHub**
+## Key Sections
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. **Hero Section**: Main value proposition with call-to-action
+2. **Problem/Solution**: Explains the UPI spending awareness issue
+3. **Features**: Detailed app capabilities
+4. **How It Works**: Simple 3-step process
+5. **Download**: Clear download links and open source messaging
 
-**Use GitHub Codespaces**
+## Customization
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- Update colors in CSS custom properties
+- Modify content in HTML
+- Add new sections as needed
+- Update social links and GitHub references
 
-## What technologies are used for this project?
+## Performance Notes
 
-This project is built with:
+- Uses system fonts for fast loading
+- Minimal external dependencies
+- Optimized images and animations
+- Service worker for caching
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## SEO Optimization
 
-## How can I deploy this project?
+- Proper heading hierarchy
+- Meta descriptions and keywords
+- Open Graph tags for social sharing
+- Semantic HTML structure
+- Fast loading times
 
-Simply open [Lovable](https://lovable.dev/projects/32278089-b484-438c-852e-f6230f437cee) and click on Share -> Publish.
+## Browser Support
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- Modern browsers (Chrome, Firefox, Safari, Edge)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+- Progressive enhancement for older browsers
+```

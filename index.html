@@ -1,24 +1,292 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>upi-budget-view</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PaymentZero | Stay Aware of Your UPI Spending</title>
+    <meta name="description" content="Open source Android app that helps you stay aware of UPI spending habits with simple monthly summaries shown as overlays when opening UPI apps.">
+    <meta name="keywords" content="UPI spending tracker, budget app, android, open source, GPay, PhonePe, spending awareness">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="PaymentZero | Stay Aware of Your UPI Spending">
+    <meta property="og:description" content="Open source Android app that helps you stay aware of UPI spending habits">
+    <meta property="og:image" content="/lovable-uploads/ec5da4c6-2950-4d82-b3b6-0e2a5a592fc6.png">
+    <meta property="og:url" content="https://paymentzero.in">
+    
+    <link rel="icon" type="image/png" href="/lovable-uploads/ec5da4c6-2950-4d82-b3b6-0e2a5a592fc6.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="/lovable-uploads/ec5da4c6-2950-4d82-b3b6-0e2a5a592fc6.png" alt="PaymentZero Logo">
+                <span>PaymentZero</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#download">Download</a>
+                <a href="https://github.com/Venkata-Sai-Vishwanath-robo" target="_blank" class="github-link">GitHub</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-    <meta property="og:title" content="upi-budget-view" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>🎯 Open Source</span>
+                    <span>📱 Android</span>
+                </div>
+                <h1 class="hero-title">
+                    Stay Aware of Your 
+                    <span class="gradient-text">UPI Spending</span>
+                </h1>
+                <p class="hero-description">
+                    PaymentZero shows you a simple monthly spend summary every time you open GPay, PhonePe, or other UPI apps. 
+                    No logins, no manual entries — just instant spending awareness to help you make better financial decisions.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://play.google.com/store/apps/details?id=com.upi.budget.tracker" target="_blank" class="cta-button primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 20.5v-17c0-.75.58-1.45 1.4-1.45L20.6 12 4.4 21.95C3.58 21.95 3 21.25 3 20.5z" fill="currentColor"/>
+                        </svg>
+                        Download on Play Store
+                    </a>
+                    <a href="https://github.com/Venkata-Sai-Vishwanath-robo" target="_blank" class="cta-button secondary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" fill="currentColor"/>
+                        </svg>
+                        View Source Code
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="overlay-demo">
+                        <div class="overlay-header">
+                            <img src="/lovable-uploads/ec5da4c6-2950-4d82-b3b6-0e2a5a592fc6.png" alt="PaymentZero">
+                            <span>PaymentZero</span>
+                        </div>
+                        <div class="spend-summary">
+                            <h3>December 2024</h3>
+                            <div class="amount">₹12,450</div>
+                            <div class="comparison">+23% from last month</div>
+                        </div>
+                        <div class="categories">
+                            <div class="category">
+                                <span>Food & Dining</span>
+                                <span>₹4,200</span>
+                            </div>
+                            <div class="category">
+                                <span>Shopping</span>
+                                <span>₹3,800</span>
+                            </div>
+                            <div class="category">
+                                <span>Transport</span>
+                                <span>₹2,450</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <div class="problem-content">
+                <h2>The Problem</h2>
+                <p>UPI payments have made spending effortless — maybe too effortless. With just a tap, money flows out, but awareness doesn't flow in.</p>
+                <div class="problem-stats">
+                    <div class="stat">
+                        <div class="stat-number">73%</div>
+                        <div class="stat-text">of users lose track of digital spending</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">₹2,500</div>
+                        <div class="stat-text">average monthly overspend</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">5 sec</div>
+                        <div class="stat-text">typical payment decision time</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container">
+            <div class="solution-content">
+                <h2>The Solution</h2>
+                <p>PaymentZero brings spending awareness right to the point of decision — when you're about to make a payment.</p>
+                <div class="solution-grid">
+                    <div class="solution-item">
+                        <div class="solution-icon">⚡</div>
+                        <h3>Instant Awareness</h3>
+                        <p>See your monthly spending the moment you open any UPI app</p>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-icon">🔒</div>
+                        <h3>Zero Setup</h3>
+                        <p>No accounts, no manual entries, no complicated setup</p>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-icon">🎯</div>
+                        <h3>Smart Timing</h3>
+                        <p>Information appears exactly when you need it most</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Features</h2>
+                <p>Everything you need to stay aware of your spending, nothing you don't</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Monthly Spend Summary</h3>
+                    <p>Quick overview of your total monthly UPI spending with comparison to previous months</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Category Breakdown</h3>
+                    <p>See where your money goes with automatic categorization of your transactions</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>Real-time Overlays</h3>
+                    <p>Information appears as overlays when you open GPay, PhonePe, and other UPI apps</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Privacy First</h3>
+                    <p>All data stays on your device. No accounts, no servers, no data collection</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚫</div>
+                    <h3>Impulse Control</h3>
+                    <p>Gentle reminders help you pause and think before making unnecessary purchases</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔓</div>
+                    <h3>Open Source</h3>
+                    <p>Fully open source code that you can inspect, modify, and contribute to</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Three simple steps to better spending awareness</p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Install & Grant Permissions</h3>
+                        <p>Download the app and give it overlay permission to show spending summaries</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Use UPI Apps Normally</h3>
+                        <p>Continue using GPay, PhonePe, or any UPI app just like you always do</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Stay Informed</h3>
+                        <p>See your spending summary automatically whenever you open a UPI app</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <div class="container">
+            <div class="download-content">
+                <h2>Ready to Take Control?</h2>
+                <p>Join thousands of users who have improved their spending awareness with PaymentZero</p>
+                <div class="download-buttons">
+                    <a href="https://play.google.com/store/apps/details?id=com.upi.budget.tracker" target="_blank" class="download-btn">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 20.5v-17c0-.75.58-1.45 1.4-1.45L20.6 12 4.4 21.95C3.58 21.95 3 21.25 3 20.5z" fill="currentColor"/>
+                        </svg>
+                        <div>
+                            <div class="download-text">Download on</div>
+                            <div class="download-store">Google Play</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="open-source-note">
+                    <p>💡 Completely free and open source. Check out the code on <a href="https://github.com/Venkata-Sai-Vishwanath-robo" target="_blank">GitHub</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="/lovable-uploads/ec5da4c6-2950-4d82-b3b6-0e2a5a592fc6.png" alt="PaymentZero">
+                        <span>PaymentZero</span>
+                    </div>
+                    <p>Helping you stay aware of your UPI spending, one overlay at a time.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>App</h4>
+                    <ul>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.upi.budget.tracker" target="_blank">Download</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#how-it-works">How it Works</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Developer</h4>
+                    <ul>
+                        <li><a href="https://github.com/Venkata-Sai-Vishwanath-robo" target="_blank">GitHub</a></li>
+                        <li><a href="https://github.com/Venkata-Sai-Vishwanath-robo" target="_blank">Source Code</a></li>
+                        <li><a href="https://github.com/Venkata-Sai-Vishwanath-robo" target="_blank">Contribute</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PaymentZero. Open source and proud of it.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
