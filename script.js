@@ -1,3 +1,4 @@
+
 // Mobile menu toggle
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
@@ -68,52 +69,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }, 150);
             }
         });
-    });
-
-    // Dynamic stats counter animation
-    function animateCounter(element, target, duration = 2000) {
-        let start = 0;
-        const increment = target / (duration / 16);
-        
-        function updateCounter() {
-            start += increment;
-            if (start < target) {
-                element.textContent = Math.floor(start);
-                requestAnimationFrame(updateCounter);
-            } else {
-                element.textContent = target;
-            }
-        }
-        
-        updateCounter();
-    }
-
-    // Animate stats when they come into view
-    const statsObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const statNumber = entry.target.querySelector('.stat-number');
-                const text = statNumber.textContent;
-                
-                // Extract number from text
-                const numberMatch = text.match(/\d+/);
-                if (numberMatch) {
-                    const number = parseInt(numberMatch[0]);
-                    statNumber.textContent = '0' + text.replace(/\d+/, '');
-                    animateCounter(statNumber, number);
-                    // Replace the number part while keeping the rest
-                    setTimeout(() => {
-                        statNumber.textContent = text;
-                    }, 2000);
-                }
-                
-                statsObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    document.querySelectorAll('.stat').forEach(stat => {
-        statsObserver.observe(stat);
     });
 
     // Add subtle parallax effect to hero section
